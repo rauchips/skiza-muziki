@@ -25,7 +25,6 @@ router.get('/', function(req, res, next) {
       transactionId: tx_ref,
       status: response.body.data[0].status,
       paymentType: response.body.data[0].payment_type,
-      paymentType: response.body.data[0].payment_type,
       amount_settled: response.body.data[0].amount_settled,
       email: response.body.data[0].customer.email,
       name: response.body.data[0].customer.name,
