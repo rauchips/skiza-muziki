@@ -2,12 +2,16 @@ const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
 const request = require('postman-request');
-// const fetch = require('node-fetch');
 
 
 /**
  * An endpoint for user to activate premium
  */
+router.route('/')
+  .get((req, res) => {
+    res.redirect('/pay')
+  })
+
 router.route('/pay')
   .get((req, res) => {
     res.render('index', { title: 'Subscribe to Premium Content' })
